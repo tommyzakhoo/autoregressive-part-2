@@ -70,6 +70,14 @@ So the erroneous values appear to be in indices 405, 482, 420, 403. After droppi
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex2.png", width="600">
 </p>
 
+There seems to be two more outliers at indices 247 and 388, which I chose to remove.
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex3.png", width="600">
+</p>
+
+Everything seems to be in order now.
+
 ## Construction Price Dataset
 
 
