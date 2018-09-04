@@ -17,6 +17,7 @@ Work in progress. Last update: 3 September 2018
 - [Tools, Techniques and Concepts](#tools-techniques-and-concepts)
 - [Motivation And Project Description](#motivation-and-project-description)
 - [Virtual Currency Dataset](#virtual-currency-dataset)
+- [Cleaning and Wrangling the Data](#cleaning-and-wrangling-the-data)
 - [Construction Price Dataset](#construction-price-dataset)
 
 ## Tools, Techniques and Concepts
@@ -37,7 +38,9 @@ Note that the "price" here is the price of this virtual currency in terms of a r
 
 The data consists of the number of orders in the market, quantity of PLEX sold, lowest buy price, highest sell price, and daily average price. There are 5010 data points, ranging from 1 April 2016 to 13 July 2018. The full set of data can be found here: [full_PLEX_data.xlsx](full_PLEX_data.xlsx)
 
-I extracted the price column into a .csv file and flipped it so that time t = 1 is 1 April 2016. A quick look at the plot
+## Cleaning and Wrangling the Data
+
+I extracted the price column into a .csv file and flipped it so that time t = 1 is 1 April 2016. A simple plot of the time series 
 
 ## Construction Price Dataset
 
