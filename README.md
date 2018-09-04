@@ -79,7 +79,7 @@ The time series looks to be error free now. The cleaned data can be found here: 
 
 ## Checking Stationarity
 
-As mentioned in part 1, Stationarity is an important assumption of the autoregressive model. I am going to use the [Dickey-Fuller test](https://en.wikipedia.org/wiki/Dickey%E2%80%93Fuller_test) to do so.
+As mentioned in part 1, Stationarity is an important assumption of the autoregressive model. I am going to use the [Dickey-Fuller test](https://en.wikipedia.org/wiki/Dickey%E2%80%93Fuller_test) and visual inspection to check for stationarity.
 
 
 
