@@ -42,7 +42,7 @@ The data consists of the number of orders in the market, quantity of PLEX sold, 
 I extracted the price column into a .csv file and flipped it so that time t = 1 is 1 April 2016.
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex.png", width="600">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex1.png", width="600">
 </p>
 
 A simple plot of the price time series shows severe outliers in the data that are probably erroneous.
@@ -83,6 +83,23 @@ As mentioned in part 1, [stationarity](https://en.wikipedia.org/wiki/Stationary_
 
 A time series is stationary if the joint cumulative probability distribution for any number of values consecutive in time does not depend on time: [see this definition](https://en.wikipedia.org/wiki/Stationary_process#Definition). I did a rough visual inspection of this, by splitting the time series into two and plotting the histogram.
 
+```Python
+import pandas as pd
+from pandas import Series
+from matplotlib import pyplot as plt
 
+plt.rcParams.update({'font.size': 22}) # set font size for plots
+
+plex = pd.read_csv('cleaned_PLEX_data.csv',header=None) # load the data
+plex = plex.squeeze() # convert dataframe to a pandas series
+
+plex_top = plex[0:400]
+plex_bottom = plex[400:828]
+
+plex_top.hist(alpha=0.3)
+plex_bottom.hist(alpha=0.3)
+
+plt.show()
+```
 
 
