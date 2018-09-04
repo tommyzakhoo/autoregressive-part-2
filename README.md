@@ -17,7 +17,7 @@ Work in progress. Last update: 3 September 2018
 - [Tools, Techniques and Concepts](#tools-techniques-and-concepts)
 - [Motivation And Project Description](#motivation-and-project-description)
 - [Virtual Currency Dataset](#virtual-currency-dataset)
-- [Cleaning and Wrangling the Virtual Currency Data](#cleaning-and-wrangling-the-virtual-currency-data)
+- [Cleaning and Wrangling the Data](#cleaning-and-wrangling-the-data)
 - [Construction Price Dataset](#construction-price-dataset)
 
 ## Tools, Techniques and Concepts
@@ -38,7 +38,7 @@ Note that the "price" here is the price of this virtual currency in terms of a r
 
 The data consists of the number of orders in the market, quantity of PLEX sold, lowest buy price, highest sell price, and daily average price. There are 5010 data points, ranging from 1 April 2016 to 13 July 2018. The full set of data can be found here: [full_PLEX_data.xlsx](full_PLEX_data.xlsx)
 
-## Cleaning and Wrangling the Virtual Currency Data
+## Cleaning and Wrangling the Data
 
 I extracted the price column into a .csv file and flipped it so that time t = 1 is 1 April 2016.
 
@@ -76,8 +76,13 @@ There seems to be two more outliers at indices 247 and 388, which I chose to rem
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex3.png", width="600">
 </p>
 
-Everything seems to be in order now.
+The time series looks to be error free now. The cleaned data can be found here: 
+
+## Checking Stationarity
+
+As mentioned in part 1, Stationarity is an important assumption of the autoregressive model. I am going to use the Dickey-Fuller test to do so.
 
 ## Construction Price Dataset
 
+To finish this project up, I applied the same method
 
