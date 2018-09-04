@@ -18,6 +18,7 @@ Work in progress. Last update: 3 September 2018
 - [Motivation And Project Description](#motivation-and-project-description)
 - [Virtual Currency Dataset](#virtual-currency-dataset)
 - [Cleaning and Wrangling the Data](#cleaning-and-wrangling-the-data)
+- [Stationarity, Differencing and the Augmented Dickey-Fuller Test](stationarity-differencing-and-the-augmented-dickey-fuller-test)
 
 ## Tools, Techniques and Concepts
 
@@ -77,29 +78,20 @@ There seems to be two more outliers at indices 247 and 388, which I chose to rem
 
 The time series looks to be error free now. The cleaned data can be found here: [cleaned_PLEX_data.csv](cleaned_PLEX_data.csv)
 
-## Checking Stationarity and the Dickey-Fuller Test
+## Stationarity, Differencing and the Augmented Dickey-Fuller Test
 
 As mentioned in part 1, [stationarity](https://en.wikipedia.org/wiki/Stationary_process) is an important assumption of the autoregressive model. I am going to use the [augmented Dickey-Fuller test](https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test) and visual inspection to check for stationarity.
 
 A time series is stationary if the joint cumulative probability distribution for any number of values consecutive in time does not depend on time: [see this definition](https://en.wikipedia.org/wiki/Stationary_process#Definition). I did a rough visual inspection of this, by splitting the time series into two and plotting the histogram.
 
-```Python
-import pandas as pd
-from pandas import Series
-from matplotlib import pyplot as plt
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive/master/hist1.png", width="600">
+</p>
 
-plt.rcParams.update({'font.size': 22}) # set font size for plots
+It is pretty clear that the distribution changed over time. One possible remedy for non-stationarity is [differencing](https://en.wikipedia.org/wiki/Stationary_process#Differencing), where the time series of differences between consecutive values is used instead.
 
-plex = pd.read_csv('cleaned_PLEX_data.csv',header=None) # load the data
-plex = plex.squeeze() # convert dataframe to a pandas series
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive/master/hist2.png", width="600">
+</p>
 
-plex_top = plex[0:400]
-plex_bottom = plex[400:828]
-
-plex_top.hist(alpha=0.3)
-plex_bottom.hist(alpha=0.3)
-
-plt.show()
-```
-
-
+Much better! However, the histogram for the second half looks like it might have a higher variance. A way to fix this is to use a [variance-stabilizing transformation](https://en.wikipedia.org/wiki/Variance-stabilizing_transformation) such the logarithm.
