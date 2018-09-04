@@ -40,11 +40,30 @@ The data consists of the number of orders in the market, quantity of PLEX sold, 
 
 ## Cleaning and Wrangling the Data
 
-I extracted the price column into a .csv file and flipped it so that time t = 1 is 1 April 2016. A simple plot of the time series 
+I extracted the price column into a .csv file and flipped it so that time t = 1 is 1 April 2016.
 
 <p align="left">
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex.png", width="600">
 </p>
+
+A simple plot of the price time series shows severe outliers in the data that are probably erroneous.
+
+```Python
+plex = data.iloc[:,0].values
+plex.argsort()
+```
+After reading the csv file into a dataframe "data", I turned it into a numpy array, and used argsort() to get a list of indices that would sort the array. Using this list, I was able to look at the values in order, starting from the largest, until I reach a value that makes sense.
+
+| Index | Value    |
+| :-:   | :-:      |
+| 405   | 10083786 |
+| 482   | 5788621  |
+| 420   | 5028172  |
+| 403   | 4671374  |
+| 622   | 3256621  |
+| 623   | 3255644  |
+| 621   | 3248608  |
+
 
 ## Construction Price Dataset
 
