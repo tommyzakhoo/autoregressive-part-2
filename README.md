@@ -42,6 +42,10 @@ The data consists of the number of orders in the market, quantity of PLEX sold, 
 
 I extracted the price column into a .csv file and flipped it so that time t = 1 is 1 April 2016. A simple plot of the time series 
 
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex.png", width="600">
+</p>
+
 ## Construction Price Dataset
 
 
