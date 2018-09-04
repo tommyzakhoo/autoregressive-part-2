@@ -1,5 +1,5 @@
 # A Series Of Correlated Events - Part 2
-### Analyzing Real World Economics Time Series With Autoregressive Models
+### Analyzing Virtual Currency Time Series Data With Autoregressive Models
 
 <br>
 
@@ -18,7 +18,6 @@ Work in progress. Last update: 3 September 2018
 - [Motivation And Project Description](#motivation-and-project-description)
 - [Virtual Currency Dataset](#virtual-currency-dataset)
 - [Cleaning and Wrangling the Data](#cleaning-and-wrangling-the-data)
-- [Construction Price Dataset](#construction-price-dataset)
 
 ## Tools, Techniques and Concepts
 
@@ -82,7 +81,5 @@ The time series looks to be error free now. The cleaned data can be found here: 
 
 As mentioned in part 1, Stationarity is an important assumption of the autoregressive model. I am going to use the [Dickey-Fuller test](https://en.wikipedia.org/wiki/Dickey%E2%80%93Fuller_test) to do so.
 
-## Construction Price Dataset
 
-To finish this project up, I applied the same method
 
