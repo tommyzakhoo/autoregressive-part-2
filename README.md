@@ -64,6 +64,11 @@ After reading the csv file into a dataframe "data", I turned it into a numpy arr
 | 623   | 3255644  |
 | 621   | 3248608  |
 
+So the erroneous values appear to be in indices 405, 482, 420, 403. After dropping these, the plot look like this.
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex2.png", width="600">
+</p>
 
 ## Construction Price Dataset
 
