@@ -76,11 +76,11 @@ There seems to be two more outliers at indices 247 and 388, which I chose to rem
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex3.png", width="600">
 </p>
 
-The time series looks to be error free now. The cleaned data can be found here: 
+The time series looks to be error free now. The cleaned data can be found here: [cleaned_PLEX_data.csv](cleaned_PLEX_data.csv)
 
 ## Checking Stationarity
 
-As mentioned in part 1, Stationarity is an important assumption of the autoregressive model. I am going to use the Dickey-Fuller test to do so.
+As mentioned in part 1, Stationarity is an important assumption of the autoregressive model. I am going to use the [Dickey-Fuller test](https://en.wikipedia.org/wiki/Dickey%E2%80%93Fuller_test) to do so.
 
 ## Construction Price Dataset
 
