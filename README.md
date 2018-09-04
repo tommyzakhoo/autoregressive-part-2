@@ -94,4 +94,10 @@ It is pretty clear that the distribution changed over time. One possible remedy 
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive/master/hist2.png", width="600">
 </p>
 
-Much better! However, the histogram for the second half looks like it might have a higher variance. A way to fix this is to use a [variance-stabilizing transformation](https://en.wikipedia.org/wiki/Variance-stabilizing_transformation) such the logarithm.
+Much better! However, the histogram for the second half looks like it might have a higher variance. A way to fix this is to use a [variance-stabilizing transformation](https://en.wikipedia.org/wiki/Variance-stabilizing_transformation) such the logarithm, before I take the difference.
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive/master/hist3.png", width="600">
+</p>
+
+
