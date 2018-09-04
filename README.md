@@ -77,9 +77,12 @@ There seems to be two more outliers at indices 247 and 388, which I chose to rem
 
 The time series looks to be error free now. The cleaned data can be found here: [cleaned_PLEX_data.csv](cleaned_PLEX_data.csv)
 
-## Checking Stationarity
+## Checking Stationarity and the Dickey-Fuller Test
 
-As mentioned in part 1, Stationarity is an important assumption of the autoregressive model. I am going to use the [Dickey-Fuller test](https://en.wikipedia.org/wiki/Dickey%E2%80%93Fuller_test) and visual inspection to check for stationarity.
+As mentioned in part 1, [stationarity](https://en.wikipedia.org/wiki/Stationary_process) is an important assumption of the autoregressive model. I am going to use the [augmented Dickey-Fuller test](https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test) and visual inspection to check for stationarity.
+
+A time series is stationary if the joint cumulative probability distribution for any number of values consecutive in time does not depend on time: [see this definition](https://en.wikipedia.org/wiki/Stationary_process#Definition). I did a rough visual inspection of this, by splitting the time series into two and plotting the histogram.
+
 
 
 
