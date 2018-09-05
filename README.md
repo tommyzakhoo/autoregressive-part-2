@@ -10,7 +10,7 @@
 </p>
 
 ## Status
-Work in progress. Last update: 3 September 2018
+Completed on 5 September 2018.
 
 ### Table of contents
 
@@ -18,8 +18,9 @@ Work in progress. Last update: 3 September 2018
 - [Motivation And Project Description](#motivation-and-project-description)
 - [Virtual Currency Dataset](#virtual-currency-dataset)
 - [Cleaning and Wrangling the Data](#cleaning-and-wrangling-the-data)
-- [Stationarity, Differencing and the Augmented Dickey-Fuller Test](stationarity-differencing-and-the-augmented-dickey-fuller-test)
-- Autocorrelation and Partial Autocorrelation Functions
+- [Stationarity, Differencing and the Augmented Dickey-Fuller Test](#stationarity-differencing-and-the-augmented-dickey-fuller-test)
+- [Autocorrelation and Partial Autocorrelation Functions](#autocorrelation-and-partial-autocorrelation-functions)
+- [Forecasting](#forecasting)
 
 ## Tools, Techniques and Concepts
 
