@@ -22,7 +22,7 @@ Work in progress. Last update: 3 September 2018
 
 ## Tools, Techniques and Concepts
 
-Python, Matplotlib, Statsmodel, Time Series Analysis, Stationarity, Variance-Stabilizing Transformations, Augmented Dickey-Fuller Test, Autoregressive Model
+Python, Matplotlib, Statsmodel, Time Series Analysis, Autoregressive Model, Stationarity, Variance-Stabilizing Transformations, Augmented Dickey-Fuller Test, Autocorrelation, Partial Autocorrelation
 
 ## Motivation And Project Description
 
@@ -100,7 +100,9 @@ Much better! However, the histogram for the second half looks like it might have
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/hist3.png", width="600">
 </p>
 
-The two histograms now looks roughly smiliar. A math joke goes: "The similarities between these two are close enough. close enough in terms of what distance? Eyeball distance." More evidence for stationarity is given by the Augmented Dickey-Fuller test, which can be found in the statsmodels package. The results of the test on the log-differenced time series is shown below.
+The two histograms now looks roughly smiliar. A math joke goes: "The similarities between these two are close enough. close enough in terms of what distance? Eyeball distance." 
+
+More evidence for stationarity is given by the Augmented Dickey-Fuller test, which can be found in the statsmodels package. The results of the test on the log-differenced time series is shown below.
 
 <p align="left">
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/adfuller.png">
@@ -110,6 +112,6 @@ The second number "1.3239e-29" is the p-value, which is miniscule, and would lea
 
 The code for all of these stationarity checks can be found here: [stationarity_check.py](stationarity_check.py). The log-differenced time series data can be found here:
 
-## Fitting the Autoregressive Model
+## Examining the Autocorrelation and Partial Autocorrelation Functions
 
 
