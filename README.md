@@ -111,7 +111,7 @@ More evidence for stationarity is given by the Augmented Dickey-Fuller test, whi
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/adfuller.png">
 </p>
 
-The second number "1.3239e-29" is the p-value, which is miniscule, and would lead to me rejecting the null hypothesis of non-stationarity at even a 0.1% level of significance. The first number "-16.7552" is the test statistic, while the percentages and numbers in braces { } are the critical values of the test statistic for various significance level.
+The second number "1.3239e-29" is the p-value, which is miniscule, and would lead to me rejecting the null hypothesis of non-stationarity at even 0.1% level of significance. The first number "-16.7552" is the test statistic, while the percentages and numbers in braces { } are the critical values of the test statistic for various significance level.
 
 The code for all of these stationarity checks can be found here: [stationarity_check.py](stationarity_check.py). The log-differenced time series data can be found here: [plex_diff.csv](plex_diff.csv)
 
