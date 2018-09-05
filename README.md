@@ -149,7 +149,14 @@ model_fit = model.fit() # fit the AR model
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex_fit.png">
 </p>
 
-## Evaluating my Forecasts
+I chose to use a stringnent p-value cut off of 0.01, which leaves only the 1st, 2nd and 15th lagged terms as statistically significant.
+
+## Forecasting
+
+## Evaluating my Model
+
+## Summary and Final Thoughts
+
 
 
 
