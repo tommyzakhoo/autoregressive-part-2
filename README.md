@@ -149,7 +149,7 @@ model_fit = model.fit() # fit the AR model
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex_fit.png">
 </p>
 
-## Evaluation my Forecasts
+## Evaluating my Forecasts
 
 
 
