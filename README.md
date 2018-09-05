@@ -153,6 +153,14 @@ I chose to use a stringnent p-value cut off of 0.01, which leaves only the 1st, 
 
 ## Forecasting
 
+My fitted autoregressive model is given by the equation below. The expected value is given because the mean of the error term is assumed to be zero. This assumption looks reasonable based on visual inspection of previously drawn histograms.
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/model.gif">
+</p>
+
+
+
 ## Evaluating my Model
 
 ## Summary and Final Thoughts
