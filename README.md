@@ -22,7 +22,7 @@ Work in progress. Last update: 3 September 2018
 
 ## Tools, Techniques and Concepts
 
-Python, Matplotlib, Statsmodel, Time Series Analysis, Autoregressive Model
+Python, Matplotlib, Statsmodel, Time Series Analysis, Stationarity, Variance-Stabilizing Transformations, Augmented Dickey-Fuller Test, Autoregressive Model
 
 ## Motivation And Project Description
 
@@ -80,7 +80,7 @@ The time series looks to be error free now. The cleaned data can be found here: 
 
 ## Stationarity, Differencing and the Augmented Dickey-Fuller Test
 
-As mentioned in part 1, [stationarity](https://en.wikipedia.org/wiki/Stationary_process) is an important assumption of the autoregressive model. I am going to use the [augmented Dickey-Fuller test](https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test) and visual inspection to check for stationarity.
+As mentioned in part 1, [stationarity](https://en.wikipedia.org/wiki/Stationary_process) is an important assumption of the autoregressive model. I am going to use the [Augmented Dickey-Fuller test](https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test) and visual inspection to check for stationarity.
 
 A time series is stationary if the joint cumulative probability distribution for any number of values consecutive in time does not depend on time: [see this definition](https://en.wikipedia.org/wiki/Stationary_process#Definition). I did a rough visual inspection of this, by splitting the time series into two and plotting the histogram.
 
@@ -94,10 +94,16 @@ It is pretty clear that the distribution changed over time. One possible remedy 
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive/master/hist2.png", width="600">
 </p>
 
-Much better! However, the histogram for the second half looks like it might have a higher variance. A way to fix this is to use a [variance-stabilizing transformation](https://en.wikipedia.org/wiki/Variance-stabilizing_transformation) such the logarithm, before I take the difference.
+Much better! However, the histogram for the second half looks like it might have a higher variance. A way to fix this is to use a [variance-stabilizing transformation](https://en.wikipedia.org/wiki/Variance-stabilizing_transformation) such the natural logarithm, before I take the difference.
 
 <p align="left">
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive/master/hist3.png", width="600">
 </p>
 
+The two histograms now looks roughly smiliar. A math joke goes: "The similarities between these two are close enough. close enough in terms of what distance? Eyeball distance." More evidence for stationarity is given by the Augmented Dickey-Fuller test, which can be found in the statsmodels package. The results of the test on the log-differenced time series is shown below.
 
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive/master/adfuller.png">
+</p>
+
+stationarity_check.py
