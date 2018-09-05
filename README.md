@@ -21,11 +21,11 @@ Completed on 5 September 2018.
 - [Stationarity, Differencing and the Augmented Dickey-Fuller Test](#stationarity-differencing-and-the-augmented-dickey-fuller-test)
 - [Autocorrelation and Partial Autocorrelation Functions](#autocorrelation-and-partial-autocorrelation-functions)
 - [Forecasting](#forecasting)
-- [Evaluating 
+- [Evaluating the Accuracy of Forecasts](#evaluating-the-accuracy-of-forecasts)
 
 ## Tools, Techniques and Concepts
 
-Python, Matplotlib, Statsmodel, Time Series Analysis, Autoregressive Model, Stationarity, Variance-Stabilizing Transformations, Augmented Dickey-Fuller Test, Autocorrelation, Partial Autocorrelation
+Python, Matplotlib, Statsmodel, Time Series Analysis, Autoregressive Model, Stationarity, Variance-Stabilizing Transformations, Augmented Dickey-Fuller Test, Autocorrelation, Partial Autocorrelation, Correlation Coefficient, Root Mean Square Errorr
 
 ## Motivation And Project Description
 
@@ -113,7 +113,7 @@ More evidence for stationarity is given by the Augmented Dickey-Fuller test, whi
 
 The second number "1.3239e-29" is the p-value, which is miniscule, and would lead to me rejecting the null hypothesis of non-stationarity at even a 0.1% level of significance. The first number "-16.7552" is the test statistic, while the percentages and numbers in braces { } are the critical values of the test statistic for various significance level.
 
-The code for all of these stationarity checks can be found here: [stationarity_check.py](stationarity_check.py). The log-differenced time series data can be found here:
+The code for all of these stationarity checks can be found here: [stationarity_check.py](stationarity_check.py). The log-differenced time series data can be found here: [plex_diff.csv](plex_diff.csv)
 
 ## Autocorrelation and Partial Autocorrelation Functions
 
@@ -167,9 +167,11 @@ Given data on the time series, I can use my model to try and forecast what the e
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/forecast.png">
 </p>
 
-## Evaluating my Model
+## Evaluating the Accuracy of Forecasts
 
+Using the numpy function numpy.corrcoef(A,B), I obtained the Pearson correlation coefficient between my forecast and the actual log-differences, which is 0.3969. Not ideal, but there is at least some correlation.
 
+Another way to check the error
 
 ## Summary and Final Thoughts
 
