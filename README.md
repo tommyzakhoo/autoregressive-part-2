@@ -130,7 +130,7 @@ The negative "spike" for the first time lag suggests incorporating a [moving-ave
 
 The partial autocorrelation has negative spikes among the first five lagged terms, while the rest looks like they might not be statistical significant. Again, the 99% confidence region is colored blue.
 
-This suggests that the average daily price of the virtual currency is negatively related to its average daily values in the last 5 days.
+This suggests that the average daily price of the virtual currency is negatively related to some of its average daily values in the last 5 days.
 
 ## Fitting the Autoregressive Model
 
@@ -160,7 +160,7 @@ My fitted autoregressive model is given by the equation below. The expected valu
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/model.gif">
 </p>
 
-
+Given data on the time series, I can use my model to try and forecast what the expected value will be 1 day ahead, using the above equation. Forecasted values can then be used recursively
 
 ## Evaluating my Model
 
