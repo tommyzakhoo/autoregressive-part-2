@@ -171,7 +171,13 @@ Given data on the time series, I can use my model to try and forecast what the e
 
 Using the numpy function numpy.corrcoef(A,B), I obtained the Pearson correlation coefficient between my forecast and the actual log-differences, which is 0.3969. Not ideal, but there is at least some correlation.
 
-Another way to check the error
+Another way I evaluated the accuracy is to check the errors, which is equal to the actual values minus predicted ones. It is a good idea to plot them out and see how severe the assumptions of stationarity and normality has been violated. There doesn't seem to be major problems within the plot of my residual errors below.
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/errors.png">
+</p>
+
+1386356.933
 
 ## Summary and Final Thoughts
 
