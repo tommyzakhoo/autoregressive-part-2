@@ -177,9 +177,28 @@ Another way I evaluated the accuracy is to check the errors, which is equal to t
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/errors.png">
 </p>
 
+The root mean square error is a popular measure of accuracy.
+
 1386356.933
 
 ## Summary and Final Thoughts
+
+In part 1 of this project, I gave a basic introduction to time series analysis and autoregressive models. Here, I applied those techniques to a set of real world time series data. The following is a list of what I have done for this part of the project.
+
+- Collected, cleaned and wrangled a set of time series data for a virtual currency.
+- Check for stationarity with visual inspection of histograms and the augmented Dickey-Fuller test.
+- Remedy the non-stationarity with a variance stabilizing transformation and differencing.
+- Analyze the autocorrelation and partial autocorrelation functions.
+- Fitted an autoregressive model to the data, filter out coefficients with low p-values.
+- Generated 1-day ahead forecasts and checked the residual errors for possible problems.
+- Evaluated the forecast accuracy with the Pearson correlation coefficiewnt and root mean square error.
+- Despite rudimentary methods and a challenging noisy data set, was able to obtain a 0.3969 correlation between the actual log-differenced time series and the 1 day ahead forecast.
+
+This is a basic attempt at building a model that generates 1 day ahead forecasts for this time series. There are a lot more that can be done to improve the accuracy or our model. 
+
+In particular, I have not tried to de-noise the data, and the autocorrelation function suggests incorporating a moving-average model. These will be further explored, when I return to write a part 3 to this project.
+
+
 
 
 
