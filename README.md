@@ -21,6 +21,7 @@ Completed on 5 September 2018.
 - [Stationarity, Differencing and the Augmented Dickey-Fuller Test](#stationarity-differencing-and-the-augmented-dickey-fuller-test)
 - [Autocorrelation and Partial Autocorrelation Functions](#autocorrelation-and-partial-autocorrelation-functions)
 - [Forecasting](#forecasting)
+- [Evaluating 
 
 ## Tools, Techniques and Concepts
 
