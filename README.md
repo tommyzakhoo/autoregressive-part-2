@@ -85,25 +85,25 @@ As mentioned in part 1, [stationarity](https://en.wikipedia.org/wiki/Stationary_
 A time series is stationary if the joint cumulative probability distribution for any number of values consecutive in time does not depend on time: [see this definition](https://en.wikipedia.org/wiki/Stationary_process#Definition). I did a rough visual inspection of this, by splitting the time series into two and plotting the histogram.
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive/master/hist1.png", width="600">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/hist1.png", width="600">
 </p>
 
 It is pretty clear that the distribution changed over time. One possible remedy for non-stationarity is [differencing](https://en.wikipedia.org/wiki/Stationary_process#Differencing), where the time series of differences between consecutive values is used instead.
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive/master/hist2.png", width="600">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/hist2.png", width="600">
 </p>
 
 Much better! However, the histogram for the second half looks like it might have a higher variance. A way to fix this is to use a [variance-stabilizing transformation](https://en.wikipedia.org/wiki/Variance-stabilizing_transformation) such the natural logarithm, before I take the difference.
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive/master/hist3.png", width="600">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/hist3.png", width="600">
 </p>
 
 The two histograms now looks roughly smiliar. A math joke goes: "The similarities between these two are close enough. close enough in terms of what distance? Eyeball distance." More evidence for stationarity is given by the Augmented Dickey-Fuller test, which can be found in the statsmodels package. The results of the test on the log-differenced time series is shown below.
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive/master/adfuller.png">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/adfuller.png">
 </p>
 
 The second number "1.3239e-29" is the p-value, which is miniscule, and would lead to me rejecting the null hypothesis of non-stationarity at even a 0.1% level of significance. The first number "-16.7552" is the test statistic, while the percentages and numbers in braces { } are the critical values of the test statistic for various significance level.
