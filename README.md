@@ -196,7 +196,7 @@ In part 1 of this project, I gave a basic introduction to time series analysis a
 
 This is a basic attempt at building a model that generates 1 day ahead forecasts for this time series. There are a lot more that can be done to improve the accuracy or our model. 
 
-In particular, I have not tried to de-noise the data, and the autocorrelation function suggests incorporating a moving-average model. These will be further explored, when I return to write a part 3 to this project.
+In particular, I have not tried to de-noise the data, and the autocorrelation function suggests incorporating a moving-average model. These will be further explored, when I return to write a follow up to this project.
 
 
 
