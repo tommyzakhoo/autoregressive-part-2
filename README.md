@@ -19,6 +19,7 @@ Work in progress. Last update: 3 September 2018
 - [Virtual Currency Dataset](#virtual-currency-dataset)
 - [Cleaning and Wrangling the Data](#cleaning-and-wrangling-the-data)
 - [Stationarity, Differencing and the Augmented Dickey-Fuller Test](stationarity-differencing-and-the-augmented-dickey-fuller-test)
+- Autocorrelation and Partial Autocorrelation Functions
 
 ## Tools, Techniques and Concepts
 
@@ -112,6 +113,43 @@ The second number "1.3239e-29" is the p-value, which is miniscule, and would lea
 
 The code for all of these stationarity checks can be found here: [stationarity_check.py](stationarity_check.py). The log-differenced time series data can be found here:
 
-## Examining the Autocorrelation and Partial Autocorrelation Functions
+## Autocorrelation and Partial Autocorrelation Functions
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex_acf.png">
+</p>
+
+The autocorrelation function looks like a funnel: starts out wide, and then taper off. This is normal behavior for a stationarity autoregressive time series, and so is good news for us. The blue region is the 99% confidence region.
+
+The negative "spike" for the first time lag suggests incorporating a [moving-average term](https://en.wikipedia.org/wiki/Moving-average_model) into my autoregressive model.
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex_pacf.png">
+</p>
+
+The partial autocorrelation has negative spikes among the first five lagged terms, while the rest looks like they might not be statistical significant. Again, the 99% confidence region is colored blue.
+
+This suggests that the average daily price of the virtual currency is negatively related to its average daily values in the last 5 days.
+
+## Fitting the Autoregressive Model
+
+'''Python
+import pandas as pd
+from pandas import Series
+from statsmodels.tsa.ar_model import AR
+
+df = pd.read_csv('plex_diff.csv',header=None) # load the data from .cvs file
+plex = df.squeeze() # convert dataframe to pandas series
+
+model = AR(plex) # input series into AR class
+model_fit = model.fit() # fit the AR model
+'''
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex_fit.png">
+</p>
+
+## Evaluation my Forecasts
+
+
 
 
