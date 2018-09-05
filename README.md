@@ -133,7 +133,7 @@ This suggests that the average daily price of the virtual currency is negatively
 
 ## Fitting the Autoregressive Model
 
-'''Python
+```Python
 import pandas as pd
 from pandas import Series
 from statsmodels.tsa.ar_model import AR
@@ -143,7 +143,8 @@ plex = df.squeeze() # convert dataframe to pandas series
 
 model = AR(plex) # input series into AR class
 model_fit = model.fit() # fit the AR model
-'''
+```
+
 <p align="left">
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex_fit.png">
 </p>
