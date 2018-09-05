@@ -160,9 +160,15 @@ My fitted autoregressive model is given by the equation below. The expected valu
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/model.gif">
 </p>
 
-Given data on the time series, I can use my model to try and forecast what the expected value will be 1 day ahead, using the above equation. Forecasted values can then be used recursively
+Given data on the time series, I can use my model to try and forecast what the expected value will be 1 day ahead, using the above equation. Forecasted values can then be used recursively for the expected values that are 2,3,4, or more days ahead. Of course, the errors get propagated forward, and so the n day's forecast gets worse for larger n.
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/forecast.png">
+</p>
 
 ## Evaluating my Model
+
+
 
 ## Summary and Final Thoughts
 
