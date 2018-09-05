@@ -117,7 +117,7 @@ The code for all of these stationarity checks can be found here: [stationarity_c
 ## Autocorrelation and Partial Autocorrelation Functions
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex_acf.png">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex_acf.png", width="600">
 </p>
 
 The autocorrelation function looks like a funnel: starts out wide, and then taper off. This is normal behavior for a stationarity autoregressive time series, and so is good news for us. The blue region is the 99% confidence region.
@@ -125,7 +125,7 @@ The autocorrelation function looks like a funnel: starts out wide, and then tape
 The negative "spike" for the first time lag suggests incorporating a [moving-average term](https://en.wikipedia.org/wiki/Moving-average_model) into my autoregressive model.
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex_pacf.png">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/plex_pacf.png", width="600">
 </p>
 
 The partial autocorrelation has negative spikes among the first five lagged terms, while the rest looks like they might not be statistical significant. Again, the 99% confidence region is colored blue.
