@@ -194,7 +194,7 @@ In part 1 of this project, I gave a basic introduction to time series analysis a
 - Evaluated the forecast accuracy with the Pearson correlation coefficiewnt and root mean square error.
 - Despite rudimentary methods and a challenging low sign high noise data set, was able to obtain a 0.3969 correlation between the actual log-differenced time series and the 1 day ahead forecast.
 
-This is a basic attempt at building a model that generates 1 day ahead forecasts for this time series. There are a lot more that can be done to improve the accuracy or our model. 
+Phew! That was a lot! Yet, this still just a basic attempt, at building a model that generates 1 day ahead forecasts, for this time series. There are a lot more that can be done to improve the accuracy or our model. 
 
 In particular, I have not tried to de-noise the data, and the autocorrelation function suggests incorporating a moving-average model. These will be further explored, when I return to write a follow up to this project.
 
