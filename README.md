@@ -10,9 +10,10 @@
 </p>
 
 ## Status
-Completed on 5 September 2018.
 
-### Table of contents
+Completed.
+
+## Table of contents
 
 - [Tools, Techniques and Concepts](#tools-techniques-and-concepts)
 - [Motivation And Project Description](#motivation-and-project-description)
