@@ -178,10 +178,6 @@ Another way I evaluated the accuracy is to check the errors, which is equal to t
   <img src="https://raw.githubusercontent.com/tommyzakhoo/autoregressive-part-2/master/errors.png">
 </p>
 
-The root mean square error is a popular measure of accuracy.
-
-1386356.933
-
 ## Summary and Final Thoughts
 
 In part 1 of this project, I gave a basic introduction to time series analysis and autoregressive models. Here, I applied those techniques to a set of real world time series data. The following is a list of what I have done for this part of the project.
